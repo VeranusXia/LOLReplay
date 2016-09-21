@@ -82,7 +82,7 @@
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 2);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(264, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(172, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -101,28 +101,28 @@
             // 
             this.登陆ToolStripMenuItem.Enabled = false;
             this.登陆ToolStripMenuItem.Name = "登陆ToolStripMenuItem";
-            this.登陆ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.登陆ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.登陆ToolStripMenuItem.Text = "登陆";
             // 
             // 同步录像ToolStripMenuItem
             // 
             this.同步录像ToolStripMenuItem.Enabled = false;
             this.同步录像ToolStripMenuItem.Name = "同步录像ToolStripMenuItem";
-            this.同步录像ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.同步录像ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.同步录像ToolStripMenuItem.Text = "同步录像";
             // 
             // 查询召唤师ToolStripMenuItem
             // 
             this.查询召唤师ToolStripMenuItem.Enabled = false;
             this.查询召唤师ToolStripMenuItem.Name = "查询召唤师ToolStripMenuItem";
-            this.查询召唤师ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.查询召唤师ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.查询召唤师ToolStripMenuItem.Text = "查询召唤师";
             this.查询召唤师ToolStripMenuItem.Click += new System.EventHandler(this.查询召唤师ToolStripMenuItem_Click);
             // 
             // 开启后台录像ToolStripMenuItem
             // 
             this.开启后台录像ToolStripMenuItem.Name = "开启后台录像ToolStripMenuItem";
-            this.开启后台录像ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.开启后台录像ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.开启后台录像ToolStripMenuItem.Text = "开启后台录像";
             this.开启后台录像ToolStripMenuItem.Click += new System.EventHandler(this.开启后台录像ToolStripMenuItem_Click);
             // 
@@ -138,7 +138,7 @@
             // Menu_Skin
             // 
             this.Menu_Skin.Name = "Menu_Skin";
-            this.Menu_Skin.Size = new System.Drawing.Size(152, 22);
+            this.Menu_Skin.Size = new System.Drawing.Size(124, 22);
             this.Menu_Skin.Text = "软件换肤";
             // 
             // 游戏设置ToolStripMenuItem
@@ -147,7 +147,7 @@
             this.客户端路径选择ToolStripMenuItem,
             this.录像文件路径ToolStripMenuItem});
             this.游戏设置ToolStripMenuItem.Name = "游戏设置ToolStripMenuItem";
-            this.游戏设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.游戏设置ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.游戏设置ToolStripMenuItem.Text = "游戏设置";
             // 
             // 客户端路径选择ToolStripMenuItem
@@ -192,13 +192,13 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // 官网ToolStripMenuItem
             // 
             this.官网ToolStripMenuItem.Name = "官网ToolStripMenuItem";
-            this.官网ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.官网ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.官网ToolStripMenuItem.Text = "官网";
             this.官网ToolStripMenuItem.Click += new System.EventHandler(this.官网ToolStripMenuItem_Click);
             // 
@@ -293,7 +293,7 @@
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LOL Replay - www.laoyuegou.com";
+            this.Text = "LOL Replay - www.lolcn.cc";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

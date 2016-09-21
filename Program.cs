@@ -68,7 +68,7 @@ namespace LOLReplay
                 string[] cmds = Environment.GetCommandLineArgs();
                 if (cmds.Length == 2)
                 {
-                    int WINDOW_HANDLER = FindWindow(null, @"LOL Replay - www.laoyuegou.com");
+                    int WINDOW_HANDLER = FindWindow(null, @"LOL Replay - www.lolcn.cc");
                     if (WINDOW_HANDLER != 0)
                     {
                         COPYDATASTRUCT cds;
@@ -81,8 +81,7 @@ namespace LOLReplay
             }
             else
             {
-                //args = new string[] { @"lolreplay://%7B%22GameId%22%3A%22845653901%22%2C%22Link%22%3A%22http%3A%5C%2F%5C%2Foss.aliyuncs.com%5C%2Flaoyuegou-lol-replay%5C%2F1fd3ac891551763d15e999332b48902a.lpr%22%7D/" };
-                //args = new string[] { @"lolreplay://%7B'GameID'%3A846002167%2C'Link'%3A'http%3A%2F%2Fwww.lolobserver.com%2Fweb%2Freplay%2FReplayDetailDownload-HN1_NEW%2C846002167.html'%7D/" };
+
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 string arg = "";

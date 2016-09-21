@@ -65,7 +65,7 @@ namespace LOLReplay
 		{
 			System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
 			stringBuilder.Append("HTTP/1.1 200 OK\r\n");
-			stringBuilder.Append("Server: LaoYueGou Spectator\r\n");
+			stringBuilder.Append("Server: LOLCN.cc Spectator\r\n");
 			stringBuilder.Append("Pragma: no-cache\r\n");
 			stringBuilder.Append("Cash-Control: no-cache\r\n");
 			stringBuilder.Append("Expires: Thu, 01 Jan 1970 08:00:00 CST \r\n");

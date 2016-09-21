@@ -129,15 +129,23 @@ namespace LOLReplay
             catch { }
             //WriteRegistryKey();
             SetMenu_skin();
-            string ReplayPath = Properties.Settings.Default.ReplayPath;
 
+            if (string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
+            {
+                Properties.Settings.Default.ReplayPath = Application.StartupPath + "\\Replay";
+                Properties.Settings.Default.Save();
+            }
+
+            string ReplayPath = Properties.Settings.Default.ReplayPath;
+            
             if (!Directory.Exists(ReplayPath))
             {
-                while (!Directory.Exists(Properties.Settings.Default.ReplayPath))
-                {
-                    MessageBox.Show("请指定存放录像文件夹路径");
-                    SetReplayFolder();
-                }
+                Directory.CreateDirectory(ReplayPath);
+                //while (!Directory.Exists(Properties.Settings.Default.ReplayPath))
+                //{
+                //    MessageBox.Show("请指定存放录像文件夹路径");
+                //    SetReplayFolder();
+                //}
             }
             else
                 InitReplayFolder();
@@ -432,7 +440,7 @@ namespace LOLReplay
 
         private void 查看对阵表ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-      
+
         }
 
         private object _lolTimerLocck = new object();
@@ -469,7 +477,11 @@ namespace LOLReplay
 
         private void 开启后台录像ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start(System.Environment.CurrentDirectory + "\\Recoder.exe");
+            try
+            {
+                Process.Start(System.Environment.CurrentDirectory + "\\Recoder.exe");
+            }
+            catch { MessageBox.Show("请将Recoder.exe手动放到程序根目录打开"); }
         }
 
 
