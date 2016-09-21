@@ -30,7 +30,11 @@ namespace LOLReplay
 		}
 		public void startPlaying()
 		{
-            IPAddress localaddr = IPAddress.Parse("http://127.0.0.1");
+            IPAddress localaddr = IPAddress.Parse("127.0.0.1");
+            if (this.listener != null)
+            {
+                this.listener.Stop();
+            }
 			this.listener = new TcpListener(localaddr, 8089);
 			this.listener.Start();
 			while (true)
@@ -116,6 +120,7 @@ namespace LOLReplay
                 }
                 if (reqstr.Contains("/exit"))
                 {
+                    this.listener = null;
                     return null;
                 }
                 if (!this.checkGameId(reqstr))

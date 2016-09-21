@@ -479,9 +479,9 @@ namespace LOLReplay
         {
             try
             {
-                Process.Start(System.Environment.CurrentDirectory + "\\Recoder.exe");
+                Process.Start(System.Environment.CurrentDirectory + "\\Recorder.exe");
             }
-            catch { MessageBox.Show("请将Recoder.exe手动放到程序根目录打开"); }
+            catch { MessageBox.Show("请将Recorder.exe手动放到程序根目录打开"); }
         }
 
 

@@ -22,12 +22,12 @@ namespace LOLReplay
         public int gameEndStartupChunkId;
         public int gameLength;
         public int gameClientAddLag;
-        public int gameELOLevel;
+        //public int gameELOLevel;
         public char[] gamePlatform;
         public char[] observerEncryptionKey;
-        public char[] gameCreateTime;
-        public char[] gameStartTime;
-        public char[] gameEndTime;
+        //public char[] gameCreateTime;
+        //public char[] gameStartTime;
+        //public char[] gameEndTime;
         public int gameDelayTime;
         public int gameLastChunkTime;
         public int gameLastChunkDuration;
@@ -74,12 +74,12 @@ namespace LOLReplay
 
 				{
 					"startTime",
-					new string(this.gameStartTime)
+					""//new string(this.gameStartTime)
 				},
 
 				{
 					"endTime",
-					new string(this.gameEndTime)
+					""//new string(this.gameEndTime)
 				},
 
 				{
@@ -161,7 +161,7 @@ namespace LOLReplay
 
 				{
 					"interestScore",
-					this.gameELOLevel
+					""//this.gameELOLevel
 				},
 
 				{
@@ -171,7 +171,7 @@ namespace LOLReplay
 
 				{
 					"createTime",
-					new string(this.gameCreateTime)
+					""//new string(this.gameCreateTime)
 				}
 			}.ToString();
         }
@@ -281,19 +281,19 @@ namespace LOLReplay
                     this.gameClientAddLag = binaryReader.ReadInt32();
                     this.gameChunkTimeInterval = binaryReader.ReadInt32();
                     this.gameKeyFrameTimeInterval = binaryReader.ReadInt32();
-                    this.gameELOLevel = binaryReader.ReadInt32();
+                    //this.gameELOLevel = binaryReader.ReadInt32();
                     this.gameLastChunkTime = binaryReader.ReadInt32();
                     this.gameLastChunkDuration = binaryReader.ReadInt32();
                     count = binaryReader.ReadInt32();
                     this.gamePlatform = binaryReader.ReadChars(count);
                     count = binaryReader.ReadInt32();
                     this.observerEncryptionKey = binaryReader.ReadChars(count);
-                    count = binaryReader.ReadInt32();
-                    this.gameCreateTime = binaryReader.ReadChars(count);
-                    count = binaryReader.ReadInt32();
-                    this.gameStartTime = binaryReader.ReadChars(count);
-                    count = binaryReader.ReadInt32();
-                    this.gameEndTime = binaryReader.ReadChars(count);
+                    //count = binaryReader.ReadInt32();
+                    //this.gameCreateTime = binaryReader.ReadChars(count);
+                    //count = binaryReader.ReadInt32();
+                    //this.gameStartTime = binaryReader.ReadChars(count);
+                    //count = binaryReader.ReadInt32();
+                    //this.gameEndTime = binaryReader.ReadChars(count);
                     if (this.ThisLPRVersion >= 3)
                     {
                         count = binaryReader.ReadInt32();
