@@ -112,6 +112,7 @@ namespace LOLReplay
 		}
 		private byte[] gotRequest(string reqstr)
 		{
+            Console.WriteLine(reqstr);
             try
             {
                 if (reqstr.Contains("/observer-mode/rest/consumer/version"))
@@ -120,7 +121,6 @@ namespace LOLReplay
                 }
                 if (reqstr.Contains("/exit"))
                 {
-                    this.listener = null;
                     return null;
                 }
                 if (!this.checkGameId(reqstr))

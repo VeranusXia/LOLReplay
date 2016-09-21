@@ -38,7 +38,7 @@ namespace LOLReplay
         public System.Collections.Generic.Dictionary<int, byte[]> gameKeyFrames;
         private byte[] endOfGameStatsBytes;
         public PlayerInfo[] players;
-     
+
         public string getMetaData()
         {
             JObject jObject = new JObject();
@@ -46,193 +46,193 @@ namespace LOLReplay
             jObject.Add("platformId", new string(this.gamePlatform));
 
             return new JObject
-			{
-				{
-					"gameKey",
-					jObject
-				},
-
-				{
-					"gameServerAddress",
-					""
-				},
-
-				{
-					"port",
-					0
-				},
-
-				{
-					"encryptionKey",
-					""
-				},
-
-				{
-					"chunkTimeInterval",
-					this.gameChunkTimeInterval
-				},
-
-				{
-					"startTime",
-					""//new string(this.gameStartTime)
-				},
-
-				{
-					"endTime",
-					""//new string(this.gameEndTime)
-				},
-
-				{
-					"gameEnded",
-					true
-				},
-
-				{
-					"lastChunkId",
-					this.gameEndChunkId
-				},
-
-				{
-					"lastKeyFrameId",
-					this.gameEndKeyFrameId
-				},
+            {
                 {
-					"endGameChunkId",
-					-1
+                    "gameKey",
+                    jObject
+                },
+
+                {
+                    "gameServerAddress",
+                    ""
+                },
+
+                {
+                    "port",
+                    0
+                },
+
+                {
+                    "encryptionKey",
+                    ""
+                },
+
+                {
+                    "chunkTimeInterval",
+                    this.gameChunkTimeInterval
+                },
+
+                {
+                    "startTime",
+                    ""//new string(this.gameStartTime)
 				},
+
+                {
+                    "endTime",
+                    ""//new string(this.gameEndTime)
+				},
+
+                {
+                    "gameEnded",
+                    true
+                },
+
+                {
+                    "lastChunkId",
+                    this.gameEndChunkId
+                },
+
+                {
+                    "lastKeyFrameId",
+                    this.gameEndKeyFrameId
+                },
+                {
+                    "endGameChunkId",
+                    -1
+                },
                 {
                     "endGamekeyFrameId",
                     -1
                 },
-				{
-					"endStartupChunkId",
-					this.gameEndStartupChunkId
+                {
+                    "endStartupChunkId",
+                    this.gameEndStartupChunkId
+                },
+
+                {
+                    "delayTime",
+                    this.gameDelayTime
+                },
+
+                {
+                    "pendingAvailableChunkInfo",
+                    ""
+                },
+
+                {
+                    "pendingAvailableKeyFrameInfo",
+                    ""
+                },
+
+                {
+                    "keyFrameTimeInterval",
+                    this.gameKeyFrameTimeInterval
+                },
+
+                {
+                    "decodedEncryptionKey",
+                    ""
+                },
+
+                {
+                    "startGameChunkId",
+                    this.gameStartChunkId
+                },
+
+                {
+                    "gameLength",
+                    this.gameLength
+                },
+
+                {
+                    "clientAddedLag",
+                    this.gameClientAddLag
+                },
+
+                {
+                    "clientBackFetchingEnabled",
+                    true
+                },
+
+                {
+                    "clientBackFetchingFreq",
+                    "50"
+                },
+
+                {
+                    "interestScore",
+                    ""//this.gameELOLevel
 				},
 
-				{
-					"delayTime",
-					this.gameDelayTime
-				},
+                {
+                    "featuredGame",
+                    "false"
+                },
 
-				{
-					"pendingAvailableChunkInfo",
-					""
-				},
-
-				{
-					"pendingAvailableKeyFrameInfo",
-					""
-				},
-
-				{
-					"keyFrameTimeInterval",
-					this.gameKeyFrameTimeInterval
-				},
-
-				{
-					"decodedEncryptionKey",
-					""
-				},
-
-				{
-					"startGameChunkId",
-					this.gameStartChunkId
-				},
-
-				{
-					"gameLength",
-					this.gameLength
-				},
-
-				{
-					"clientAddedLag",
-					this.gameClientAddLag
-				},
-
-				{
-					"clientBackFetchingEnabled",
-					true
-				},
-
-				{
-					"clientBackFetchingFreq",
-					"50"
-				},
-
-				{
-					"interestScore",
-					""//this.gameELOLevel
-				},
-
-				{
-					"featuredGame",
-					"false"
-				},
-
-				{
-					"createTime",
-					""//new string(this.gameCreateTime)
+                {
+                    "createTime",
+                    ""//new string(this.gameCreateTime)
 				}
-			}.ToString();
+            }.ToString();
         }
 
         public string getLastChunkInfo()
         {
             return new JObject
-			{
+            {
 
-				{
-					"chunkId",
-					this.gameEndChunkId
-				},
+                {
+                    "chunkId",
+                    this.gameEndChunkId
+                },
 
-				{
-					"availableSince",
-					this.gameLastChunkTime
-				},
+                {
+                    "availableSince",
+                    this.gameLastChunkTime
+                },
 
-				{
-					"nextAvailableChunk",
-					1000
-				},
+                {
+                    "nextAvailableChunk",
+                    1000
+                },
 
-				{
-					"keyFrameId",
-					this.gameEndKeyFrameId
-				},
+                {
+                    "keyFrameId",
+                    this.gameEndKeyFrameId
+                },
 
-				{
-					"nextChunkId",
-					this.gameEndChunkId
-				},
+                {
+                    "nextChunkId",
+                    this.gameEndChunkId-1
+                },
 
-				{
-					"endStartupChunkId",
-					this.gameEndStartupChunkId
-				},
+                {
+                    "endStartupChunkId",
+                    this.gameEndStartupChunkId
+                },
 
-				{
-					"startGameChunkId",
-					this.gameStartChunkId
-				},
+                {
+                    "startGameChunkId",
+                    this.gameStartChunkId
+                },
 
-				{
-					"endGameChunkId",
-					this.gameEndChunkId
-				},
+                {
+                    "endGameChunkId",
+                     this.gameEndChunkId
+                },
 
-				{
-					"duration",
-					this.gameLastChunkDuration
-				}
-			}.ToString();
+                {
+                    "duration",
+                    this.gameLastChunkDuration
+                }
+            }.ToString();
         }
         private void allocateChunkAndKeyFrameSpaces()
         {
             this.gameKeyFrames = new System.Collections.Generic.Dictionary<int, byte[]>();
             this.gameChunks = new System.Collections.Generic.Dictionary<int, byte[]>();
         }
-    
+
         public byte[] getKeyFrameContent(int n)
         {
             if (this.gameKeyFrames.ContainsKey(n))
@@ -241,7 +241,7 @@ namespace LOLReplay
             }
             return null;
         }
-       
+
         public byte[] getChunkContent(int n)
         {
             if (this.gameChunks.ContainsKey(n))
@@ -250,8 +250,8 @@ namespace LOLReplay
             }
             return new byte[] { };
         }
-        
-       
+
+
         public void readFromFile(string path, bool withOutChunks)
         {
             this.relatedFileName = path;
@@ -408,6 +408,6 @@ namespace LOLReplay
                 this.gameChunks.Add(this.gameStartChunkId + k, dataReader.ReadBytes(count));
             }
         }
-          
+
     }
 }
